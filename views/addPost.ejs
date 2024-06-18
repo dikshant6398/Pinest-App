@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add post</title>
+    <link rel="stylesheet" href="/stylesheets/addPost.css">
+</head>
+<body>
+    <div class="footer01">
+        <div class="navBar">
+            <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+            <h1>Pintest</h1>
+            <div>
+            <a href="/profile">Profile</a>
+            <a href="/feed">Feed</a>
+            <a class="button" href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="posts">
+        <h1>Create new post....</h1>
+        <form action="/createPost" method="post" enctype="multipart/form-data">
+            <input class="input1" type="file" name="postImage">
+            <input class="input1" type="text" placeholder="Title" name="title">
+            <textarea class="input1" type="text" placeholder="Description" name="description"></textarea>
+            <input class="input1 inpbtn" type="submit" value="Create Post">
+        </form>
+    </div>
+</body>
+</html>

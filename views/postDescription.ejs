@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>description</title>
+    <link rel="stylesheet" href="/stylesheets/postDes.css">
+</head>
+<body>
+    <div class="navBar">
+      <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+        <h1>Pintest</h1>
+        <div>
+        <a href="/profile">Profile</a>
+        <a href="/feed">Feed</a>
+        <a class="button" href="/logout">Logout</a>
+        </div>
+      </div>
+    <div class="container">
+     
+        <div class="cards cardsflex">
+          <% user.posts.forEach(function(post){ %>
+            <div class="card" style="width: 18rem;">
+              <img src="/images/uploads/<%= post.image %>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><%= post.title %></h5>
+                <h3><%= post.title %></h3>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

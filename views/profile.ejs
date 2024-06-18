@@ -12,21 +12,31 @@
 />
   </head>
   <body>
+    <div class="navBar">
+      <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+      <h1>Pintest</h1>
+      <div class="navContent">
+      
+      <a href="/feed">Feed</a>
+      <a href="/postDescription">Explore </a>
+      <a class="button" href="/logout">Logout</a>
+      </div>
+    </div>
     <div class="containerper">
         <form id="uploadform" hidden action="/fileupload" method="post" enctype="multipart/form-data">
-          <input type="file" name="profile-image">
+          <input type="file" name="profileImage">
         </form>
         <div class="cardper">
           <div class="iconprofile">
             <span id="uploadimage" class="icon"><i class="ri-pencil-fill iconcolor"></i></span>
             <div class="profile-picture">
-              <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="Profile Picture">
+              <img src="/images/uploads/<%= user.dp %>" alt="Profile Picture">
             </div>
           </div>
           <h2 class="name"><%=user.fullname%></h2>
           <h3 class="username">@<%=user.username%></h3>
           <a href="/logout" class="button">Logout</a><br>
-          <button class="btnpost">Add new post</button>
+          <a href="/addPost" class="btnpost">Add new post</a>
           <!-- <form action="/upload" method="post" enctype="multipart/form-data">
             <input type="text" name="filecaption" placeholder="caption...">
             <input type="file" name="file">
@@ -42,7 +52,7 @@
             <div class="card" style="width: 18rem;">
               <img src="/images/uploads/<%= post.image %>" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title"><%= post.imageText %></h5>
+                <h5 class="card-title"><%= post.title %></h5>
               </div>
           </div>
           <% }) %>
@@ -57,7 +67,8 @@
       });
       document.querySelector("#uploadform input").addEventListener("change",function(){
         document.querySelector("#uploadform").submit();
-      })
+      });
+      
     </script>
   </body>
 </html>

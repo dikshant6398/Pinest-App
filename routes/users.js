@@ -19,10 +19,7 @@ const userSchema =new mongoose.Schema({
       ref: 'Post' // Assuming you have a 'Post' model
     }
   ],
-  dp: {
-    type: String,
-    //default: 'default.jpg' // Default profile picture
-  },
+  dp:String,
   email: {
     type: String,
     required: true,
